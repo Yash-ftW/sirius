@@ -1,3 +1,7 @@
 main{
   min-height:84vh;
 }
+
+.link-no{
+  text-decoration: none;
+}
