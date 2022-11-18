@@ -62,7 +62,7 @@ function Header() {
           </Link> */}
 
           <LinkContainer to="/">
-            <Navbar.Brand>Sirius</Navbar.Brand>
+            <Navbar.Brand className="px-2">Sirius</Navbar.Brand>
           </LinkContainer>
 
           <Navbar.Collapse className="justify-content-end px-5">
@@ -73,7 +73,7 @@ function Header() {
 
           <LinkContainer to="/login" style={{ color: "white" }}>
             <Nav.Link>
-              <i className="fas fa-user"></i> Login
+              <i className="fas fa-user px-2"></i>Login
             </Nav.Link>
           </LinkContainer>
         </Container>
