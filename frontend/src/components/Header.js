@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  Navbar,
-  Container,
-  Button,
-  Offcanvas,
-  NavDropdown,
-} from "react-bootstrap";
+import { Navbar, Container, Button, Offcanvas, Nav } from "react-bootstrap";
 
 import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
@@ -16,9 +10,9 @@ function Header() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const logoutHandler = () => {
-    alert("Logout");
-  };
+  // const logoutHandler = () => {
+  //   alert("Logout");
+  // };
   return (
     <header>
       <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
@@ -71,18 +65,17 @@ function Header() {
             <Navbar.Brand>Sirius</Navbar.Brand>
           </LinkContainer>
 
-          <Navbar.Collapse className="justify-content-end">
+          <Navbar.Collapse className="justify-content-end px-5">
             <Navbar.Text>
               <Weather />
             </Navbar.Text>
           </Navbar.Collapse>
 
-          <NavDropdown title="Student Name" id="username">
-            <LinkContainer to="/profile">
-              <NavDropdown.Item>Profile</NavDropdown.Item>
-            </LinkContainer>
-            <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
-          </NavDropdown>
+          <LinkContainer to="/login" style={{ color: "white" }}>
+            <Nav.Link>
+              <i className="fas fa-user"></i> Login
+            </Nav.Link>
+          </LinkContainer>
         </Container>
       </Navbar>
     </header>
