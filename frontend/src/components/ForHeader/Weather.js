@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import Loader from "./Loader";
-import "../index.css";
+import Loader from "../Loader";
+// import "../index.css";
 
 function Weather() {
   const [data, setData] = useState([]);
@@ -23,7 +23,7 @@ function Weather() {
           <Loader />
         </span>
       ) : (
-        <span className="fs-6">
+        <span className="fs-6 pe-none">
           {isError !== "" && <span>{isError}</span>}
           <div>{data.name}</div>
           <small>

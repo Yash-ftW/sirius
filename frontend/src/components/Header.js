@@ -1,73 +1,28 @@
-import React, { useState } from "react";
-import { Navbar, Container, Button, Offcanvas, Nav } from "react-bootstrap";
+import React from "react";
+import { Navbar, Container, Nav } from "react-bootstrap";
 
 import { LinkContainer } from "react-router-bootstrap";
-import { Link } from "react-router-dom";
-import Weather from "./Weather";
+
+import Weather from "./ForHeader/Weather";
+import Time from "./ForHeader/Time";
+import OffCanva from "./ForHeader/OffCanva";
 
 function Header() {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  // const logoutHandler = () => {
-  //   alert("Logout");
-  // };
   return (
     <header>
       <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
         <Container>
-          <Button variant="dark" onClick={handleShow}>
-            <i className="fa-solid fa-bars"></i>
-          </Button>
-          <Offcanvas show={show} onHide={handleClose}>
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title>
-                <h1>Menu</h1>
-              </Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-              <ul class="list-group">
-                <Link to="/" className="link-no">
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Graph
-                  </li>
-                </Link>
-                <Link to="/" className="link-no">
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Schedule
-                  </li>
-                </Link>
-                <Link to="/" className="link-no">
-                  <li className="list-group-item d-flex justify-content-between align-items-center">
-                    Calendar
-                  </li>
-                </Link>
-                <Link to="/" className="link-no">
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Details
-                  </li>
-                </Link>
-              </ul>
-            </Offcanvas.Body>
-          </Offcanvas>
-          {/* <Link to="/">
-            <img
-              src={require("../images/logo.png")}
-              alt=""
-              width="30"
-              height="24"
-              class="d-inline-block align-text-top"
-            />
-          </Link> */}
-
+          <OffCanva />
           <LinkContainer to="/">
-            <Navbar.Brand className="px-2">Sirius</Navbar.Brand>
+            <Navbar.Brand className="px-2">SIRIUS</Navbar.Brand>
           </LinkContainer>
 
           <Navbar.Collapse className="justify-content-end px-5">
+            <Navbar.Text className="px-3">
+              <Time style={{ cursor: "none" }} />
+            </Navbar.Text>
             <Navbar.Text>
-              <Weather />
+              <Weather className="pe-none" />
             </Navbar.Text>
           </Navbar.Collapse>
 
