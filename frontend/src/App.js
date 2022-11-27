@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
+import TodoScreen from "./screens/TodoScreen";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomeScreen />} exact />
             <Route path="/login" element={<LoginScreen />} />
+            <Route path="/todo" element={<TodoScreen />} />
           </Routes>
         </Container>
       </main>

@@ -16,7 +16,7 @@ function HomeScreen() {
           <Card className="p-3 rounded my-3">
             <h1 className="d-flex justify-content-center">Sirius</h1>
             <h3 className="d-flex justify-content-center">
-              The Brightest Star ok
+              The Brightest Star
             </h3>
             <div>
               Sirius is the brightest star in the night sky. Its name is derived

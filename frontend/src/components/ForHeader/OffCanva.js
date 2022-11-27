@@ -39,7 +39,7 @@ function OffCanva() {
                 Recommendations
               </li>
             </Link>
-            <Link to="/" className="link-no">
+            <Link to="/todo" className="link-no">
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 To-Do List
               </li>
