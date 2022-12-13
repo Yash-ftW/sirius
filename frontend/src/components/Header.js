@@ -10,7 +10,7 @@ import OffCanva from "./ForHeader/OffCanva";
 function Header() {
   return (
     <header>
-      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+      <Navbar expand="lg" collapseOnSelect className="navbar">
         <Container>
           <OffCanva />
           <LinkContainer to="/">
@@ -22,11 +22,11 @@ function Header() {
               <Time style={{ cursor: "none" }} />
             </Navbar.Text>
             <Navbar.Text>
-              <Weather className="pe-none" />
+              <Weather />
             </Navbar.Text>
           </Navbar.Collapse>
 
-          <LinkContainer to="/login" style={{ color: "white" }}>
+          <LinkContainer to="/login">
             <Nav.Link>
               <i className="fas fa-user px-2"></i>Login
             </Nav.Link>

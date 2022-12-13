@@ -1,12 +1,100 @@
-main{
-  min-height:84vh;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.link-no{
+:root {
+  --vivid-sky-blue: #56cbf9ff;
+  --aero: #7fbeebff;
+  --light-steel-blue: #afbed1ff;
+  --queen-pink: #eac5d8ff;
+  --lavender-web: #dbd8f0ff;
+}
+
+main {
+  background: var(--aero);
+}
+
+
+main {
+  min-height: 84vh;
+}
+
+.link-no {
   text-decoration: none;
 }
 
-.border-this{
-  border:1px solid red;
-  
+.border-this {
+  border: 1px solid red;
+
+}
+
+.todo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--lavender-web);
+}
+
+/* Banner Home Screen */
+.banner {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 30px;
+}
+
+/* Features */
+
+.features {
+  display: grid;
+  margin-top: 50px;
+  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  grid-template-rows: repeat(2, minmax(100px, 1fr));
+  grid-template-areas:
+    "feature1 feature1img"
+    "feature2img feature2";
+  border: 5px solid var(--queen-pink);
+  justify-items: center;
+  align-items: center;
+}
+
+.feature>img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 50%;
+  border-radius: 30px;
+}
+
+.feature-1 {
+  grid-area: feature1;
+}
+
+.feature-2 {
+  grid-area: feature1img;
+}
+
+.feature-3 {
+  grid-area: feature2;
+}
+
+.feature-4 {
+  grid-area: feature2img;
 }

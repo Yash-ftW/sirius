@@ -7,6 +7,8 @@ import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
 import TodoScreen from "./screens/TodoScreen";
 
+import "./index.css";
+
 function App() {
   return (
     <Router>

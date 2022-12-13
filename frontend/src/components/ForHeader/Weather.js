@@ -16,6 +16,13 @@ function Weather() {
       .catch((error) => setIsError(error.message));
   }, []);
 
+  // if (typeof data.main !== "undefined") {
+  //   let weatid =
+  //     "http://openweathermap.org/img/wn/" + data.weather[0].icon + ".png";
+  // }
+
+  //console.log(data.weather[0].icon);
+
   return (
     <>
       {typeof data.main === "undefined" ? (
@@ -28,6 +35,16 @@ function Weather() {
           <div>{data.name}</div>
           <small>
             {data.main.temp}°C | {data.weather[0].main}
+            {/* <br />
+            <img
+              src={
+                "http://openweathermap.org/img/wn/" +
+                data.weather[0].icon +
+                ".png"
+              }
+              alt="Weather"
+              className="weather-img"
+            /> */}
           </small>
         </span>
       )}

@@ -14,13 +14,14 @@ const TodoScreen = () => {
   const inputDeleter = (index) => {
     setValue(
       value.filter((arg, id) => {
-        return id != index;
+        return id !== index;
       })
     );
   };
 
   return (
     <div>
+      <h3 className="todo-title">To-Do</h3>
       <TodoInput onInputHandler={inputHandler} />
       <TodoDisplay sendTask={value} onDelete={inputDeleter} />
     </div>
