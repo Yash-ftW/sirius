@@ -1,16 +1,34 @@
-import React, { useState } from "react";
-import { Offcanvas, Button } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Offcanvas } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function OffCanva() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
-      <Button variant="dark" onClick={handleShow}>
+      <button
+        className={`off-btn ${scrolled ? "scrolled" : ""}`}
+        onClick={handleShow}
+      >
         <i className="fa-solid fa-bars"></i>
-      </Button>
+      </button>
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>

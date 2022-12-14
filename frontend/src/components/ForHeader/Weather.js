@@ -32,7 +32,6 @@ function Weather() {
       ) : (
         <span className="fs-6 pe-none">
           {isError !== "" && <span>{isError}</span>}
-          <div>{data.name}</div>
           <small>
             {data.main.temp}°C | {data.weather[0].main}
             {/* <br />

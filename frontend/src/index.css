@@ -12,13 +12,13 @@
   --lavender-web: #dbd8f0ff;
 }
 
-main {
-  background: var(--aero);
+html {
+  background-color: var(--aero);
 }
 
-
 main {
-  min-height: 84vh;
+  background: var(--aero);
+  margin-top: 80px;
 }
 
 .link-no {
@@ -42,8 +42,43 @@ main {
 }
 
 /* Navbar */
-.navbar {
+
+nav.navbar {
   background: var(--lavender-web);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: 0.32s ease-in-out;
+}
+
+nav.navbar.scrolled {
+  padding: 0px 0;
+  background-color: #9f99c5;
+}
+
+.off-btn {
+  background-color: var(--lavender-web);
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 0.32s ease-in-out;
+}
+
+.off-btn.scrolled {
+  background-color: #9f99c5;
+}
+
+.link-login:hover {
+  color: white !important;
+}
+
+
+/* Footer */
+footer {
+  background: var(--lavender-web);
+
 }
 
 /* Banner Home Screen */
