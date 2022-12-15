@@ -63,15 +63,12 @@ def generateModel(df):
     )
         
         gridsearch_result=mod.fit(x_train,y_train)
-        predict=mod.predict(x_test)
-        print(f"{model} : ",gridsearch_result.best_estimator_)
         
         if(score < float(gridsearch_result.score(x_test,y_test))):
-            print("INSIDE")
             score=gridsearch_result.score(x_test,y_test)
             gridsearch=gridsearch_result.fit(x_train,y_train)
-        
         if model not in model_accuracy.keys():
             model_accuracy.update({model:gridsearch_result.score(x_test,y_test)})
+    
     score=gridsearch.score(x_test,y_test)
     return gridsearch,score

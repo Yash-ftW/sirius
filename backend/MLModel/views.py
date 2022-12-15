@@ -35,8 +35,8 @@ def buildModel(request):
     data=pd.read_excel(filePath)
   
     model,score=generateModel(data)
-    print("SCORE \n \n")
-    joblib.dump(model,f'{filePath}model1.pkl')
+    
+    joblib.dump(model,f'{filePath}models/model1.pkl')
     
     score=float(score)
     
