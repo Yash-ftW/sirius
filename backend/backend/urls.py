@@ -14,9 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from MLModel import views
-from django.views.decorators.csrf import csrf_exempt
+from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
+from django.views.generic import TemplateView
+'''
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('predictMarks/',csrf_exempt(views.predictMarks),name='predictMarks'),
@@ -24,3 +26,10 @@ urlpatterns = [
     path('buildModel/',views.buildModel,name='predictFile')
 
 ]
+'''
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/users/',include('base.urls.user_url')),
+    
+]
+urlpatterns +=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
