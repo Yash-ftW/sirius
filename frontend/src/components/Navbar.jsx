@@ -45,7 +45,7 @@ function Navbar() {
       <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            <img src={require("../images/logo.png")} alt="Logo" />
+            <img src={require("../images/logo_light.png")} alt="Logo" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />

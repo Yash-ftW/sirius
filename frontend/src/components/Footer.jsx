@@ -53,7 +53,7 @@ function Footer() {
         <div className="social-media-wrap">
           <div className="footer-logo">
             <Link to="/" className="social-logo">
-              <img src={require("../images/logo.png")} alt="Logo" />
+              <img src={require("../images/logo_light.png")} alt="Logo" />
             </Link>
           </div>
           <small className="website-rights">Sirius © 2022</small>
