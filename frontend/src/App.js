@@ -1,27 +1,27 @@
-import Header from "./components/Header";
-import { Container } from "react-bootstrap";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Footer from "./components/Footer";
-import HomeScreen from "./screens/HomeScreen";
-import LoginScreen from "./screens/LoginScreen";
-import TodoScreen from "./screens/TodoScreen";
-
 import "./index.css";
+
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import HomeScreen from "./screens/Home";
+import TodoScreen from "./screens/TodoScreen";
+import FeaturesScreen from "./screens/FeaturesScreen";
+import Login from "./screens/Login";
+import AboutScreen from "./screens/AboutScreen";
 
 function App() {
   return (
     <Router>
-      <Header />
-      <main className="py-3">
-        <Container>
-          <Routes>
-            <Route path="/" element={<HomeScreen />} exact />
-            <Route path="/login" element={<LoginScreen />} />
-            <Route path="/todo" element={<TodoScreen />} />
-          </Routes>
-        </Container>
-      </main>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomeScreen />} exact />
+        <Route path="/login" element={<Login />} />
+        <Route path="/todo" element={<TodoScreen />} />
+        <Route path="/features" element={<FeaturesScreen />} />
+        <Route path="/about" element={<AboutScreen />} />
+      </Routes>
       <Footer />
     </Router>
   );

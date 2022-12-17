@@ -1,145 +1,48 @@
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
-}
-
-:root {
-  --vivid-sky-blue: #56cbf9ff;
-  --aero: #7fbeebff;
-  --light-steel-blue: #afbed1ff;
-  --queen-pink: #eac5d8ff;
-  --queen-pink-darker: rgb(231, 76, 156);
-  --lavender-web: #dbd8f0ff;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
 }
 
 html {
-  background-color: var(--aero);
+  scroll-behavior: smooth;
 }
 
-main {
-  background-image: url("https://wallpaperaccess.com/full/39632.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  margin-top: 80px;
-}
-
-.link-no {
-  text-decoration: none;
-}
-
-.border-this {
-  border: 1px solid red;
-
-}
-
-.todo-title {
+.home,
+.services,
+.products,
+.sign-up {
   display: flex;
+  height: 90vh;
   align-items: center;
   justify-content: center;
+  font-size: 3rem;
 }
 
-.weather-img {
-  width: 50px;
-  height: 50px;
-}
-
-/* Navbar */
-
-nav.navbar {
-  background: var(--lavender-web);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  transition: 0.32s ease-in-out;
-}
-
-nav.navbar.scrolled {
-  padding: 0px 0;
-  background-color: #9f99c5;
-}
-
-.off-btn {
-  background-color: var(--lavender-web);
-  padding: 0.5rem 0.5rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  transition: 0.32s ease-in-out;
-}
-
-.off-btn.scrolled {
-  background-color: #9f99c5;
-}
-
-.link-login:hover {
-  color: white !important;
-}
-
-
-/* Footer */
-footer {
-  background: var(--lavender-web);
-}
-
-/* Banner Home Screen */
-.banner {
-  height: 75vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  background-image: url("https://img.freepik.com/free-vector/hand-drawn-minimal-background_23-2149006548.jpg?w=2000");
-  background-repeat: no-repeat;
+.services {
+  background-image: url('./images/img-2.jpg');
+  background-position: center;
   background-size: cover;
-  background-attachment: fixed;
-  border-radius: 30px;
-}
-
-/* Features */
-.feat {
-  margin-top: 50px;
-  left: 50%;
-  padding: 20px 30px;
-  background-image: url("./images/banner.jpg");
   background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.products {
+  background-image: url('./images/img-1.jpg');
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.sign-up {
+  background-image: url('./images/img-8.jpg');
+  background-position: center;
   background-size: cover;
-  background-attachment: fixed;
-  border-radius: 30px;
-}
-
-.feat>h2,
-.feature>h5 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-}
-
-.line {
-  width: 75px;
-  height: 4px;
-  background: var(--queen-pink-darker);
-  margin: 10px auto;
-  border-radius: 5px;
-}
-
-.features {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(3, minmax(240px, 1fr));
-  justify-items: center;
-  align-items: center;
-}
-
-
-.feature>img {
-  object-fit: cover;
-  width: 100%;
-  height: 252px;
-  max-height: 50%;
-  border-radius: 30px;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }

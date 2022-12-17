@@ -7,7 +7,7 @@ import Img3 from "../images/recommend.jpg";
 
 function HomeScreen() {
   return (
-    <Container>
+    <>
       <div className="banner">
         <h1>SIRUS</h1>
         <h3>Student Evaluation System</h3>
@@ -42,7 +42,7 @@ function HomeScreen() {
           <img src={Img2} alt="Feature2" />
         </div>
       </div> */}
-    </Container>
+    </>
   );
 }
 
