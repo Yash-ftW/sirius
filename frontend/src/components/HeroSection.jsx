@@ -18,7 +18,7 @@ function HeroSection() {
           buttonSize="btn--large"
           path="login"
         >
-          LOGIN
+          LOGIN <i class="fa-solid fa-right-to-bracket"></i>
         </Button>
         <Button
           className="btns"
@@ -26,7 +26,7 @@ function HeroSection() {
           buttonSize="btn--large"
           path="/about"
         >
-          ABOUT US
+          ABOUT US <i class="fa-solid fa-circle-info"></i>
         </Button>
       </div>
     </div>
